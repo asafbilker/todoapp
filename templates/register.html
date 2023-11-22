@@ -1,0 +1,26 @@
+<!-- register.html -->
+{% extends 'base.html' %}
+
+{% block title %}Register - ToDo App{% endblock %}
+
+{% block content %}
+    <h2>Register for Your ToDo App</h2>
+
+    <!-- Success message container -->
+    <div id="registration-success-message" class="messages success"></div>
+
+    <!-- Error message container -->
+    <div id="registration-error-message" class="messages error"></div>
+
+    <form id="registration-form" action="{{ url_for('register') }}" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a>.</p>
+{% endblock %}

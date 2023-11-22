@@ -1,0 +1,14 @@
+<!-- index.html -->
+{% extends 'base.html' %}
+
+{% block title %}Home - ToDo App{% endblock %}
+
+{% block content %}
+    {% if 'user_id' in session %}
+        <h2>{{ welcome_message }}</h2>
+        <!-- Display additional information for logged-in users if needed -->
+    {% else %}
+        <h2>Welcome to Your ToDo App</h2>
+        <p>This is a simple ToDo app. Get started by registering or logging in.</p>
+    {% endif %}
+{% endblock %}

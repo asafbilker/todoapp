@@ -1,0 +1,166 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px; /* Adjusted padding for better responsiveness */
+}
+
+nav h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 10px; /* Reduced margin for better spacing on small screens */
+}
+
+.container {
+    max-width: 100%; /* Adjusted for better responsiveness */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    padding: 8px;
+    width: 100%; /* Adjusted for better responsiveness */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    width: 100%; /* Adjusted for better responsiveness */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+.task {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensure tasks wrap on small screens */
+}
+
+.task.done {
+    background-color: #d4edda;
+}
+
+.task-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Add some styling for the flashed messages */
+.messages {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px;
+    display: none;
+}
+
+.mark-complete-button {
+    margin-top: 10px; /* Adjusted spacing for better responsiveness */
+}
+
+.error,
+.success {
+    width: 100%; /* Adjusted for better responsiveness */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    margin-top: 20px;
+    padding: 8px;
+    border-radius: 5px;
+    display: none;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 10px; /* Adjusted padding for better responsiveness */
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive adjustments for the footer */
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+        padding: 10px; /* Adjusted padding for better responsiveness */
+    }
+
+    footer ul {
+        justify-content: center;
+    }
+
+    footer li {
+        margin: 0 10px;
+    }
+}
+
+#login-success-message,
+#registration-success-message,
+#login-error-message-user,
+#login-error-message-password,
+#registration-error-message {
+    width: 100%; /* Adjusted for better responsiveness */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    margin-top: 20px;
+    padding: 8px;
+    border-radius: 5px;
+    display: none;
+}
+
+/* style.css */

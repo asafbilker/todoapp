@@ -1,0 +1,33 @@
+<!-- tasks.html -->
+{% extends 'base.html' %}
+
+{% block title %}Tasks - ToDo App{% endblock %}
+
+{% block content %}
+<header>
+    <h1>Your ToDo List</h1>
+</header>
+
+<form action="{{ url_for('add_task') }}" method="POST">
+    <input type="text" name="content" placeholder="Add a new task..." required>
+    <button type="submit">Add Task</button>
+</form>
+
+{% for task in tasks %}
+    <form class="toggle-form" action="{{ url_for('toggle_task') }}" method="POST">
+        <div class="task{% if task.completed %} done{% endif %}" data-task-id="{{ task.id }}">
+            <span>{{ task.content }}</span>
+            <div class="task-actions">
+                <button class="mark-complete-button{% if task.completed %} completed{% endif %}" type="button">
+                    {% if task.completed %}
+                        Mark as Uncompleted
+                    {% else %}
+                        Mark as Completed
+                    {% endif %}
+                </button>
+                <a href="{{ url_for('delete_task', task_id=task.id) }}">Delete</a>
+            </div>
+        </div>
+    </form>
+{% endfor %}
+{% endblock %}
